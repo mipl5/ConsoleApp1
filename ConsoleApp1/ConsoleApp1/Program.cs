@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,13 @@ namespace ConsoleApp1
             float hourly_rate = float.Parse(Console.ReadLine());
             Console.WriteLine("Please enter the employee's age here:");
             int age = int.Parse(Console.ReadLine());
+            if (age < 0 || the_umber_of_hours_the_employee_worked < 0 || hourly_rate <0) {
+                Environment.Exit(0);
+            }
+            else
+            {
+                Console.WriteLine("O.K.");
+            }
             Console.WriteLine("Is the employee a citizen (C) or not (F)? Enter your answer here please:");
             char status = char.Parse(Console.ReadLine());
             if (age >= 0 && age < 17)
